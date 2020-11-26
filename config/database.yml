@@ -9,22 +9,22 @@ default: &default
   encoding: utf8
   reconnect: false
   pool: 5
-  database: ry_test
+  database: jdbc:mysql://10.6.6.67:3306/ry_test
   username: ipsc
   password: Sunwin_2019
   timeout: 5000
 
 development:
   <<: *default
-  database: ry_test
+  # database:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ry_test
+  # database:
 
 production:
   <<: *default
-  database: ry_test
+  # database:
