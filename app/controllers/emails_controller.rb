@@ -1,13 +1,10 @@
 class EmailsController < ApplicationController
 
-  def new
-
-  end
 
   def create
     @email = Email.new(email_params)
     @email.save
-    redirect_to @email
+    render action: "contact"
   end
 
 
