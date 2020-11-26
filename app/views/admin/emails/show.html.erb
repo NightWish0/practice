@@ -20,6 +20,11 @@
   </p>
 
   <p>
+    <strong>Sender Time:</strong>
+    <%= @email.send_time %>
+  </p>
+
+  <p>
     <strong>Title:</strong>
     <%= @email.title %>
   </p>
@@ -28,6 +33,8 @@
     <strong>Content:</strong>
     <%= @email.content %>
   </p>
+
+  <%= link_to 'Back', admin_emails_path %>
 </div>
 </body>
 </html>

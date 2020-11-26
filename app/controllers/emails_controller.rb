@@ -3,8 +3,11 @@ class EmailsController < ApplicationController
 
   def create
     @email = Email.new(email_params)
-    @email.save
-    render action: "contact"
+    if @email.save
+      redirect_to @email
+    else
+      render action: "contact"
+    end
   end
 
 

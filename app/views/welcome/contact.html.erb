@@ -3,7 +3,21 @@
 <body>
   <h1>If you have any questions or Suggestions, please send them to me from the email below.</h1>
 
-  <%= form_with scope: :emails, url: emails_path, local: true do |form| %>
+  <%= form_with scope: :email, url: emails_path, local: true do |form| %>
+
+    <% if @email.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@email.errors.count, "error") %> prohibited
+          this email from being saved:
+        </h2>
+        <ul>
+          <% @email.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
     <p>
       <%= form.label :sender_name %><br>

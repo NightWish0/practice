@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'parking', to: 'welcome#parking'
   get 'contact', to: 'welcome#contact'
 
-  resources :emails
+  resources :email
 
   namespace :admin do
 

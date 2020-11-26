@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby on Rails</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+<div class="container">
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Sender Name</th>
+      <th>Sender Email</th>
+      <th>Send Time</th>
+      <th></th>
+    </tr>
+
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= email.id %></td>
+        <td><%= email.sender_name %></td>
+        <td><%= email.sender_email %></td>
+        <td><%= email.send_time %></td>
+        <td><%= link_to 'Show', admin_email_path(email) %></td>
+        <td><%= link_to 'Destroy', admin_email_path(email), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+</body>
+</html>
+
