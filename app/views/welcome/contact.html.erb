@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby on Rails</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+<div class="container">
+
+  <p>If you have any questions or Suggestions, please send them to me from the email below.</p>
+
+  <%= form_with scope: :emails, url: email_path, local: true do |form| %>
+    <p>
+      <%= form.label :sender_name %><br>
+      <%= form.label :sender_email %><br>
+      <%= form.label :title %><br>
+      <%= form.text_field :content %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</div>
+</body>
+</html>
+
