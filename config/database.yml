@@ -7,16 +7,16 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  reconnect: false
+  reconnect: true
+  host: 10.6.6.67
   pool: 5
   database: ry_test
+  username: ipsc
+  password: Sunwin_2019
   timeout: 5000
 
 development:
   <<: *default
-  url: jdbc:mysql://10.6.6.67:3306/ry_test?pool=5
-  username: ipsc
-  password: Sunwin_2019
   # database:
 
 # Warning: The database defined as "test" will be erased and
