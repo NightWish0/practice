@@ -1,28 +1,42 @@
-<h1>If you have any questions or Suggestions, please send them to me from the email below.</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PracticeSystem</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-<%= form_with scope: :emails, url: emails_path, local: true do |form| %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <p>
-    <%= form.label :sender_name %><br>
-    <%= form.text_field :sender_name %>
-  </p>
+<body>
+  <h1>If you have any questions or Suggestions, please send them to me from the email below.</h1>
 
-  <p>
-    <%= form.label :sender_email %><br>
-    <%= form.text_field :sender_email %>
-  </p>
+  <%= form_with scope: :emails, url: emails_path, local: true do |form| %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <p>
+      <%= form.label :sender_name %><br>
+      <%= form.text_field :sender_name %>
+    </p>
 
-  <p>
-    <%= form.label :content %><br>
-    <%= form.text_field :content %>
-  </p>
+    <p>
+      <%= form.label :sender_email %><br>
+      <%= form.text_field :sender_email %>
+    </p>
 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :content %><br>
+      <%= form.text_field :content %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</body>
+</html>
