@@ -1,6 +1,5 @@
 class EmailsController < ApplicationController
 
-
   def create
     @email = Email.new(email_params)
     if @email.save

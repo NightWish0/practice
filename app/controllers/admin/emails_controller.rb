@@ -1,7 +1,4 @@
-module Admin
-  class EmailsController < Admin::ApplicationController
-
-    http_basic_authenticate_with name: "admin", password: "admin"
+class EmailsController < Admin::ApplicationController
 
     def index
       @emails = Email.all
@@ -17,5 +14,4 @@ module Admin
       redirect_to admin_email_path
     end
 
-  end
 end
